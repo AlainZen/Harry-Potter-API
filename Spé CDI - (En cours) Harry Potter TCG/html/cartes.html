@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harry Potter Site - Carte</title>
+    <link rel="stylesheet" href="css/cartes.css" />
+  </head>
+  <body>
+    <input type="checkbox" id="check" />
+    <label for="check">
+      <i class="fas fa-bars" id="btn"></i>
+      <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+      <header>Menu</header>
+      <a href="homepage.html" class="active">
+        <i class="fas fa-qrcode"></i>
+        <span>Accueil</span>
+      </a>
+      <a href="cartes.html">
+        <i class="fas fa-link"></i>
+        <span>Cartes</span>
+      </a>
+      <a href="login.html">
+        <i class="fas fa-stream"></i>
+        <span>Inscription</span>
+      </a>
+      <a href="profile.html">
+        <i class="fas fa-calendar"></i>
+        <span>Profile</span>
+      </a>
+      <a href="booster.html">
+        <i class="far fa-question-circle"></i>
+        <span>Boosters</span>
+      </a>
+    </div>
+    <header>
+      <h1>Liste de Cartes</h1>
+      <label for="house-filter">Filtrer par maison :</label>
+      <select id="house-filter">
+        <option value="">Toutes les maisons</option>
+        <option value="gryffindor">Gryffindor</option>
+        <option value="Serpentard">Serpentard</option>
+        <option value="Poufsouffle">Poufsouffle</option>
+        <option value="Serdaigle">Serdaigle</option>
+      </select>
+      <button id="filter-button">Filtrer</button>
+    </header>
+
+    <div id="card-container" class="container"></div>
+    <script src="js/cartes.js"></script>
+  </body>
+</html>

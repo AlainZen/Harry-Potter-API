@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .sidenav {
+    background-color: #2d2d2d;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    z-index: 99;
+    top: 0;
+  }
+  
+  button {
+    background-color: #740001;
+    color: #fff;
+    border: solid 1px #ffd900;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  /*tst*/
+  
+  .fill-bottom {
+    position: relative;
+    height: 45px;
+    width: 150px;
+    margin: 10px 7px;
+    padding: 5px 5px;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    border: 2px #ffffff solid;
+    border-radius: 4px;
+    text-transform: uppercase;
+    outline: 0;
+    overflow: hidden;
+    background: none;
+    cursor: pointer;
+  }
+  
+  .fill-bottom::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #39356e;
+    z-index: -1;
+    transition: height 0.3s ease;
+  }
+  
+  .fill-bottom:hover::before {
+    height: 100%;
+  }

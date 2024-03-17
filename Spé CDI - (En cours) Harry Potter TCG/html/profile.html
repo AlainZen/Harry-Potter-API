@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profil de l'utilisateur</title>
+    <link rel="stylesheet" href="css/profile.css" />
+  </head>
+  <body>
+    <nav class="sidenav">
+      <a href="homepage.html"><button class="fill-bottom">Accueil</button></a>
+      <a href="cartes.html"><button class="fill-bottom">Cartes</button></a>
+      <a href="profile.html"><button class="fill-bottom">Profil</button></a>
+      <a href="login.html"
+        ><button class="fill-bottom">Page de Connexion</button></a
+      >
+      <a href="booster.html"><button class="fill-bottom">Boosters</button></a>
+    </nav>
+
+    <div class="profile-banner">
+      <div class="profile-info">
+        <img src="" alt="Photo de profil" />
+        <div class="user-info">
+          <h2>Alsli159</h2>
+          <p>Email: Alainzensliman@gmail.com</p>
+          <p>Pays: Lebanon</p>
+          <p>Bio: Un Fauve</p>
+        </div>
+      </div>
+      <div class="profile-buttons">
+        <button onclick="showOwnedCards()">Voir les cartes possédées</button>
+        <button onclick="showFavoriteCards()">Voir les cartes favorites</button>
+      </div>
+    </div>
+
+    <script src="js/profile.js"></script>
+  </body>
+</html>

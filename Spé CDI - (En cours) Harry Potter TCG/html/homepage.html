@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harry Potter Site</title>
+    <link rel="stylesheet" href="css/homepage.css" />
+  </head>
+  <body>
+    <input type="checkbox" id="check" />
+    <label for="check">
+      <i class="fas fa-bars" id="btn"></i>
+      <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+      <header>Menu</header>
+      <a href="homepage.html" class="active">
+        <i class="fas fa-qrcode"></i>
+        <span>Accueil</span>
+      </a>
+      <a href="cartes.html">
+        <i class="fas fa-link"></i>
+        <span>Cartes</span>
+      </a>
+      <a href="login.html">
+        <i class="fas fa-stream"></i>
+        <span>Inscription</span>
+      </a>
+      <a href="profile.html">
+        <i class="fas fa-calendar"></i>
+        <span>Profile</span>
+      </a>
+      <a href="booster.html">
+        <i class="far fa-question-circle"></i>
+        <span>Boosters</span>
+      </a>
+    </div>
+    <button id="openModalBtn" class="floating-btn">Échanger une carte</button>
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span id="closeModalBtn" class="close">&times;</span>
+        <h2>Formulaire d'échange</h2>
+        <form id="exchangeForm">
+          <label for="cardName">Nom de la carte :</label>
+          <input type="text" id="cardName" name="cardName" required />
+
+          <button type="submit">Envoyer</button>
+        </form>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="container">
+        <input type="radio" name="slide" id="c1" checked />
+        <label for="c1" class="card">
+          <div class="row">
+            <div class="icon">1</div>
+            <div class="description">
+              <h4>Wizarding World</h4>
+              <p>Bienvenue dans le monde de Harry Potter</p>
+            </div>
+          </div>
+        </label>
+        <input type="radio" name="slide" id="c2" />
+        <label for="c2" class="card">
+          <div class="row">
+            <div class="icon">2</div>
+            <div class="description">
+              <h4>Profile</h4>
+              <p>Faites vous des amij'en sais r - Rejoignez-nous</p>
+            </div>
+          </div>
+        </label>
+      </div>
+    </div>
+    <script src="js/homepage.js"></script>
+  </body>
+</html>

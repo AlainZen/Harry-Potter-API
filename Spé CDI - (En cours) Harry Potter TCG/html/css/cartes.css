@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+:root {
+  --accent-color: #fff;
+  --gradient-color: #fbfbfb;
+}
+.sidebar {
+  position: fixed;
+  width: 240px;
+  left: -240px;
+  height: 100%;
+  background-color: #000000;
+  color: #fff;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+.sidebar header {
+  font-size: 28px;
+  color: #ffffff;
+  line-height: 70px;
+  text-align: center;
+  background-color: #000000;
+  user-select: none;
+  font-family: "Lora", sans-serif;
+}
+.sidebar a {
+  display: block;
+  height: 65px;
+  width: 100%;
+  color: #353535;
+  line-height: 65px;
+  padding-left: 30px;
+  box-sizing: border-box;
+  border-left: 5px solid transparent;
+  font-family: "Lato", sans-serif;
+  transition: all 0.5s ease;
+}
+a.active,
+a:hover {
+  border-left: 5px solid var(--accent-color);
+  color: #fff;
+  background: linear-gradient(
+    to left,
+    var(--accent-color),
+    var(--gradient-color)
+  );
+}
+.sidebar a i {
+  font-size: 23px;
+  margin-right: 16px;
+}
+.sidebar a span {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: white;
+}
+#check {
+  display: none;
+}
+label #btn,
+label #cancel {
+  position: absolute;
+  left: 5px;
+  cursor: pointer;
+  color: #ffffff;
+  border-radius: 5px;
+  margin: 15px 30px;
+  font-size: 29px;
+  background-color: #767373;
+  height: 45px;
+  width: 45px;
+  text-align: center;
+  text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
+  line-height: 45px;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+label #cancel {
+  opacity: 0;
+  visibility: hidden;
+}
+#check:checked ~ .sidebar {
+  left: 0;
+}
+#check:checked ~ label #btn {
+  margin-left: 245px;
+  opacity: 0;
+  visibility: hidden;
+}
+#check:checked ~ label #cancel {
+  margin-left: 245px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.sidebar > a.active,
+.sidebar > a:hover:nth-child(even) {
+  --accent-color: #071161;
+  --gradient-color: #0738b3;
+}
+.sidebar a.active,
+.sidebar > a:hover:nth-child(odd) {
+  --accent-color: #0e14cd;
+  --gradient-color: #0b0b5c;
+}
+
+/* ------------------------------------------------------------------------tst */
+
+/* ----------------------------------------------------------------------card container*/
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 10px;
+}
+
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+:root {
+  --clr-1: #000000;
+  --clr-2: #01062e;
+  --clr-3: #16048a;
+  --clr-4: #2517bd;
+  --clr-5: #7b85f5;
+}
+
+.card {
+  height: 60vh;
+  aspect-ratio: 1 / 1.5;
+  background: var(--clr-1);
+  border-radius: 0.5rem;
+
+  position: relative;
+}
+
+.card::before,
+.card::after {
+  content: "";
+  position: absolute;
+  inset: -0.5rem;
+  z-index: -1;
+  background: conic-gradient(
+    from var(--gradient-angle),
+    var(--clr-3),
+    var(--clr-4),
+    var(--clr-5),
+    var(--clr-4),
+    var(--clr-3)
+  );
+  border-radius: inherit;
+  animation: rotation 20s linear infinite;
+}
+
+.card::after {
+  filter: blur(3.5rem);
+}
+
+@keyframes rotation {
+  /*c'est magnifique wlh*/
+  0% {
+    --gradient-angle: 0deg;
+  }
+  100% {
+    --gradient-angle: 360deg;
+  }
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  /*pas les meilleur dim mais ça va ça passe*/
+  width: 90%;
+  height: 80%;
+  object-fit: cover;
+  border-bottom: none;
+}
+
+.card-details {
+  padding: 5px;
+}
+
+.card-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: none;
+  color: white;
+}
+
+.card-link {
+  /*j'crois ça va faire plusieurs link ou trouver comment appeler le link pour changer la couleur*/
+  display: block;
+  background-color: #1b2032;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 15px;
+}
+
+.card-link:hover {
+  background-color: #ffffff;
+}
+
+/* ----------------------------------------------------------------------card container*/
+
+/* ----------------------------------------------------------------------header*/
+header {
+  background-color: #32026c;
+  color: #fff;
+  padding: 7px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 24px;
+}
+
+header label {
+  margin-right: 10px;
+}
+
+header select {
+  padding: 5px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+header button {
+  padding: 8px 20px;
+  background-color: #5602cb;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+header button:hover {
+  background-color: #2a0045;
+}
